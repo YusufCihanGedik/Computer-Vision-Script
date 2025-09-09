@@ -75,7 +75,7 @@
 * Bu işlem sonrası label dosyası güncellenmeli.
 
 ---
-
+#MTY
 ### 8. Scroll ile Box Silme
 
 * Kullanıcı GUI’de görsel üzerinde box seçtiğinde, **mouse scroll (orta tuş)** ile o box silinebilmeli.
