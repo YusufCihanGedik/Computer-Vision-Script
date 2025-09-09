@@ -121,6 +121,4 @@ Taşıma işlemi sonrası dosyalar hedef klasöre **fiziksel olarak taşınır**
 * **Loglama**: Her hareketi CSV’ye kaydetme (timestamp, action, file).
 * **Sınıf/Skor Filtresi**: Belirli sınıfları veya skor aralığını gösterme.
 
----
 
-İhtiyaç olursa bu betiğe **undo**, **zoom/pan**, **oturum kaydı** gibi özellikleri eklenmiş bir sürümünü de hazırlayabilirim.
