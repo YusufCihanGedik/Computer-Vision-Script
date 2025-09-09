@@ -1,6 +1,4 @@
-Süper—şu anda paylaştığın **tek dosyalık** kontrol aracı üzerinden gidiyorum. Aşağıdaki metni doğrudan `README.md` olarak kaydedebilirsin.
 
----
 
 # YOLO Görsel Kontrol & Hızlı Ayırma Aracı
 
