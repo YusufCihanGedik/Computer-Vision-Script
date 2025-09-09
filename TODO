@@ -1,0 +1,95 @@
+
+---
+
+# Görsel Kontrol Tool – Geliştirme TODO Listesi
+
+### 1. Genel Amaç
+
+* Mevcut basit CLI/OpenCV tabanlı tool, **GUI (ör. PyQt5 veya Tkinter)** ile yeniden tasarlanmalı.
+* Amaç: daha düzenli, kullanışlı ve kullanıcı dostu bir görsel etiket kontrol aracı oluşturmak.
+
+---
+
+### 2. Dosyalama İşlemleri
+
+* **Silme (w):** Seçilen görsel ve label dosyası `deleted/` klasörüne taşınmalı.
+* **Revize (s):** Seçilen görsel ve label dosyası `revise/` klasörüne taşınmalı.
+* İşlemler sonrası dosya listesi güncellenmeli, index kaymamalı.
+* Taşıma sırasında label dosyası yoksa sadece görsel taşınmalı.
+
+---
+
+### 3. GUI Üzerinden Path Tanımlama
+
+* Kullanıcı GUI’de:
+
+  * **Image klasörü yolu**
+  * **Label klasörü yolu**
+  * **Deleted klasörü yolu**
+  * **Revise klasörü yolu**
+    girebilmeli veya dosya seçici (file dialog) ile seçebilmeli.
+* Path seçiminden sonra sistem görselleri yükleyip ilkini göstermeli.
+
+---
+
+### 4. Klavye Kısayolları (README’deki özellikler)
+
+* `a` → önceki görsel
+* `d` → sonraki görsel
+* `w` → silme (deleted’e taşı)
+* `s` → revizeye gönderme (revise’e taşı)
+* `q` → çıkış
+
+> Bu kısayollar GUI’de aktif olmalı (örn. pencere odaklı event handler ile).
+
+---
+
+### 5. Görsel Sayacı
+
+* GUI üzerinde:
+
+  * **Toplam görsel sayısı**
+  * **Kontrol edilen görsel sayısı**
+  * **Kalan görsel sayısı**
+    gösterilmeli.
+* Bu bilgiler her işlemde güncellenmeli.
+
+---
+
+### 6. Sınıf Bilgisi Paneli
+
+* Tool içerisinde bir **text box / panel** bulunmalı.
+* Burada:
+
+  * **Sınıf ID’leri**
+  * **Karşılık gelen sınıf isimleri**
+    listelenmeli.
+* Gerekirse bu tablo dışarıdan (`model.names`) otomatik doldurulmalı.
+
+---
+
+### 7. ID Değiştirme Özelliği
+
+* **Toplu ID Değiştirme:** Kullanıcı seçtiği görseller için belirli bir class ID’yi başka bir ID’ye dönüştürebilmeli (label dosyaları üzerinde).
+* **Tekil ID Değiştirme:** Seçilen tek görselde, istediği box’ın class ID’sini değiştirebilmeli.
+* Bu işlem sonrası label dosyası güncellenmeli.
+
+---
+
+### 8. Scroll ile Box Silme
+
+* Kullanıcı GUI’de görsel üzerinde box seçtiğinde, **mouse scroll (orta tuş)** ile o box silinebilmeli.
+* Silinen box label dosyasından da kaldırılmalı.
+* İşlem sonrası görsel anlık olarak güncellenmeli.
+
+---
+
+### 9. Ekstra İyileştirmeler (Opsiyonel)
+
+* **Undo (geri al)**: Son silinen veya taşınan görseli geri getirme.
+* **Zoom & Pan**: Görseller üzerinde yakınlaştırma/taşıma desteği.
+* **Oturum Kaydı**: Son kaldığı index’i saklayıp yeniden açıldığında kaldığı yerden devam edebilme.
+* **Loglama**: Hangi görselin hangi klasöre taşındığı CSV veya TXT olarak kaydedilebilir.
+
+---
+
